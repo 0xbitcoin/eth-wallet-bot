@@ -7,6 +7,7 @@ let web3 = new Web3('ws://localhost:8546');
 
 const mongoInterface = require('./mongo-interface')
 
+const config = require("./config.json");
 
 
 
@@ -17,6 +18,12 @@ module.exports = {
   {
     mongoInterface.init('ethwalletbot')
   },
+
+  async getETHAccount()
+  {
+    //.PUBLIC_ADDRESS .PRIVATE_KEY
+     return config.ETH_ACCT
+  }
 
 
   async generateNewWallet(uid){
