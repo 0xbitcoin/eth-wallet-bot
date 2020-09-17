@@ -51,7 +51,6 @@ module.exports = {
     //var result = await db.ethwallets.findOne({uid:uid})
     var result = await mongoInterface.findOne('wallets',{uid: uid})
 
-      console.log('result',result)
 
       return result;
   }
